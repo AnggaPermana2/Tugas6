@@ -1,6 +1,6 @@
 <h4>Tambah Data</h4>
 <hr>
-<form action="index.php?mod=dokter&page=save" method="POST">
+<form action="index.php?mod=dokter&page=save" method="POST" enctype="multipart/formdata">
     <div class="col-md-6">
         <div class="form-group">
             <label for="">Nama Dokter</label>
@@ -44,6 +44,10 @@
             </select>
             <span class="text-danger"><?=(isset($err['id_spesialisasi']))?$err['id_spesialisasi']:'';?></span>
     </div>
+    <div class="form-group">
+    <label for="Photos"></label>
+    <input type="file" name="fileupload" class="form-control">
+    <span class="text-danger"><?=(isset($err['fileupload']))?$err['fileupload']:'';?></span>
     <div class="form-group">
             <button type="submit" class="btn btn-primary">Save</button>
     </div>
